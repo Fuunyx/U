@@ -163,23 +163,23 @@ local function resolveid(image, flag)
 							codename = string.sub(codename, 1, 24) .. tostring(fixes)
 							local fold = isfolder("./Requiem Hub Premium Scripts")
 							if not fold then
-								makefolder("./Requiem Hub Premium Scripts")
+								makefolder("./Wave Hub Premium Scripts")
 							end
-							fold = isfolder("./Requiem Hub Premium Scripts/Themes")
+							fold = isfolder("./Wave Hub Premium Scripts/Themes")
 							if not fold then
-								makefolder("./Requiem Hub Premium Scripts/Themes")
+								makefolder("./Wave Hub Premium Scripts/Themes")
 							end
-							fold = isfolder("./Requiem Hub Premium Scripts/Themes/SynapseAssetsCache")
+							fold = isfolder("./Wave Hub Premium Scripts/Themes/SynapseAssetsCache")
 							if not fold then
-								makefolder("./Requiem Hub Premium Scripts Themes/SynapseAssetsCache")
+								makefolder("./Wave Hub Premium Scripts Themes/SynapseAssetsCache")
 							end
-							if not fold or not isfile("./Requiem Hub Premium Scripts/Themes/SynapseAssetsCache/" .. codename .. ".dat") then
+							if not fold or not isfile("./Wave Hub Premium Scripts/Themes/SynapseAssetsCache/" .. codename .. ".dat") then
 								local res = game:HttpGet(string.sub(image, 15))
 								if res ~= nil then
-									writefile("./Requiem Hub Premium Scripts/Themes/SynapseAssetsCache/" .. codename .. ".dat", res)
+									writefile("./Wave Hub Premium Scripts/Themes/SynapseAssetsCache/" .. codename .. ".dat", res)
 								end
 							end
-							return getsynasset(readfile("./Requiem Hub Premium Scripts/Themes/SynapseAssetsCache/" .. codename .. ".dat"))
+							return getsynasset(readfile("./Wave Hub Premium Scripts/Themes/SynapseAssetsCache/" .. codename .. ".dat"))
 						end)
 						if x and e ~= nil then
 							return e
